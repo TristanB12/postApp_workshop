@@ -3,7 +3,7 @@
 In order to achieve the postApp workshop you should follow these instructions. 
 
 ## VS Code extensions
-To have a better coding experience add these extensions to you VS Code:
+To have a better coding experience add these extensions to your VS Code:
  - [Vue VS Code Extension Pack](https://marketplace.visualstudio.com/items?itemName=sdras.vue-vscode-extensionpack)
 ## front-end
 
