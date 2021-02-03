@@ -20,4 +20,5 @@ You are now invited to select projects settings: use **arrow keys** to navigate,
  - and finally say No to Save this as a preset for future projects
  
 Now you can replace your `front/src/` folder by downloading [this one](https://github.com/TristanB12/postApp_workshop/raw/master/asides/content/src_content.zip) to have no useless files.
-Finally
+
+Finally go into your `front/` folder and run `yarn serve` or `npm run dev`, go into your browser at http://localhost:8080/. You should have a full white screen.
