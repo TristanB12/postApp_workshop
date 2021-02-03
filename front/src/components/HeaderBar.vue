@@ -3,9 +3,10 @@
         <div id="headerBar">
             <h1>PostApp</h1>
             <ul id="navBar">
-                <li>Home</li>
-                <li><router-link to="Login">Login</router-link></li>
+                <li><router-link :to="{name: 'Home'}">Home</router-link></li>
                 <li>Signup</li>
+                <li v-if="!loginInfos.is_logged"><router-link :to="{name: 'Login'}">Login</router-link></li>
+                <li v-else>Hello {{ loginInfos.username }} </li>
             </ul>
         </div>
     </div>
@@ -13,7 +14,23 @@
 
 <script>
     export default {
-        name: 'headerBar'
+        name: 'headerBar',
+        props: {
+            loginInfos: {
+                type: Object,
+                default: {}
+            },
+        },
+        data() {
+            return {
+                login_infos: this.loginInfos
+            }
+        },
+        watch: {
+            loginInfos() {
+                this.login_infos = this.loginInfos
+            }
+        },
     }
 </script>
 

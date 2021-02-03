@@ -1,15 +1,30 @@
 <template>
   <div id="app">
-    <HeaderBar />
-    <router-view/>
+    <HeaderBar :loginInfos="login_infos"/>
+    <router-view @userLogged="logUser"/>
   </div>
 </template>
 
 <script>
 import HeaderBar from '@/components/HeaderBar.vue';
+import LoginPage from '@/views/LoginPage.vue';
     export default {
         components: {
           HeaderBar,
+        },
+        data() {
+          return {
+            login_infos: {
+              is_logged: false,
+              username: '',
+            }
+          }
+        },
+        methods: {
+          logUser(payload) {
+            this.login_infos.is_logged = true;
+            this.login_infos.username = payload.username;
+          }
         },
     }
 </script>

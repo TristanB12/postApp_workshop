@@ -2,16 +2,31 @@
     <div id="loginPage">
         <div class="user-login-pannel">
             <h2>User login</h2>
-            <input type="text" placeholder="Username">
-            <input type="password" placeholder="Password">
-            <button>Login</button>
+            <input type="text" placeholder="Username" v-model="username_input">
+            <input type="password" placeholder="Password" v-model="password_input">
+            <button @click="emitLogUser">Login</button>
         </div>
     </div>
 </template>
 
 <script>
     export default {
-        name: 'LoginPage'
+        name: 'LoginPage',
+        data() {
+            return {
+                username_input: '',
+                password_input: ''
+            }
+        },
+        methods: {
+            emitLogUser() {
+                this.$emit('userLogged', {
+                    username: this.username_input,
+                    password: this.password_input
+                })
+                this.$router.push({ name: 'Home' });
+            }
+        },
     }
 </script>
 
