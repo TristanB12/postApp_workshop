@@ -1,9 +1,9 @@
 # postApp_workshop
 
-The aim of this workshop is to introduce you at fullstack developpement. You will learn how to do a postApp with:
+The aim of this workshop is to introduce you to fullstack development. You will learn how to do a postApp with:
   - a full authentication system (with login and sign up modules)
   - an 'add post' option wich permit you to add a post in the app
-  - a 'feed' pannel where you can see other posts
+  - a 'feed' pannel where you can see other people's posts
   
  By implementing these features you will learn:
   - Vue.js
