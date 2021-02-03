@@ -1,8 +1,11 @@
-# PostApp Workshop - front end
+# Installation
 
-The goal of this workshop is to introduce you to front-end developpement with Vue.js and HTML/CSS.
+In order to achieve the postApp workshop you should follow these instructions. 
 
-## Step 0: Installation
+## VS Code extensions
+To have a better coding experience add these extensions to you VS Code:
+ - [Vue VS Code Extension Pack](https://marketplace.visualstudio.com/items?itemName=sdras.vue-vscode-extensionpack)
+## front-end
 
 First, create a new github repository and clone it into your computer.
 
