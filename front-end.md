@@ -16,4 +16,11 @@ Now you can write HTML and CSS to have this nice header bar (don't forget to [im
 
 ![plot](https://github.com/TristanB12/postApp_workshop/blob/master/asides/images/headerbar.png)
 
+When this header bar is done you can create a `LoginPage.vue` file into `/front/src/views/`. Open the `front/src/router/index.js` file and add a new route with:
+  - a `/login` path
+  - a name of your choice
+  - a component linked to this route (the `LoginPage` one)
+You can look at [this](https://router.vuejs.org/guide/#html) page to understand what is a vue route.
+Now you `LoginPage` view is displayed right under the `HeaderBar` so you can write HTML and CSS code to have this result:
 
+![plot](https://github.com/TristanB12/postApp_workshop/blob/master/asides/images/login%20page.png)
