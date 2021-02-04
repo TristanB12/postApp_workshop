@@ -24,3 +24,24 @@ You can look at [this](https://router.vuejs.org/guide/#html) page to understand 
 Now you `LoginPage` view is displayed right under the `HeaderBar` so you can write HTML and CSS code to have this result:
 
 ![plot](https://github.com/TristanB12/postApp_workshop/blob/master/asides/images/login%20page.png)
+
+
+## Step 02 - Events and states
+
+In your `App.vue` file, add the following [datas](https://v3.vuejs.org/guide/data-methods.html#data-properties):
+  - `is_logged` wich is false by default
+  - `username` initialized to an empty string
+ 
+ When the user clicks on `Login` button we want to set `is_logged` to true and `username` to the string entered by the user.
+ 
+ To get this result you have to get the username thank to the [v-model](https://vuejs.org/v2/guide/forms.html) keyword.
+ 
+ Then you will need to use [v-on](https://vuejs.org/v2/guide/events.html) to get the **click** event and [$emit](https://vuejs.org/v2/guide/components.html#Emitting-a-Value-With-an-Event) to send the username string.
+ 
+ now we want the header bar to display differently whether the user is logged in or not.
+
+if he is not, the bar will display as in step one. Otherwise it should display "Hello {username}!" instead of `login` and `sign up` as in the following example:
+
+![plot](https://github.com/TristanB12/postApp_workshop/blob/master/asides/images/headerbarloggedin.png)
+
+In order to finish this step you will need to look [how to pass data to child component](https://vuejs.org/v2/guide/components.html#Passing-Data-to-Child-Components-with-Props), [how to display data](https://vuejs.org/v2/guide/syntax.html) and finally [display element depending on a condition](https://vuejs.org/v2/guide/conditional.html#v-if).
