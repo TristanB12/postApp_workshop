@@ -46,4 +46,18 @@ a {
   color: white;
   text-decoration: none;
 }
+
+input {
+    width: 60%;
+    margin: 0 auto 0 auto;
+    font-size: 1.5em;
+    padding: 15px 10px;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+
+    &::placeholder {
+        color: #A0A0A0;
+    }
+}
 </style>

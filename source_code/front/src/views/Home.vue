@@ -1,13 +1,17 @@
 <template>
   <div id="home">
-    <h2>My Posts</h2>
-    <img src="@/assets/add_post_btn.png" alt="" class="post-btn">
-    <PostItem v-for="post in my_posts" :key="post.nb_likes" :postInfos="post" :username="username"/>
+    <div class="add-post">
+      <input type="text" placeholder="add a post" v-model="post_content">
+      <img src="@/assets/add_post_btn.png" alt="" class="post-btn" @click="addPost">
+    </div>
+    <PostItem v-for="post in posts" :key="post.nb_likes" :postInfos="post" :username="username"/>
   </div>
 </template>
 
 <script>
 import PostItem from '@/components/PostItem.vue';
+const DateModule = require('@/modules/date.js')
+
 export default {
   name: 'Home',
   components: {
@@ -21,7 +25,8 @@ export default {
   },
   data() {
     return {
-      my_posts: [
+      post_content: '',
+      posts: [
         {
           date: '10/02/2021',
           nb_likes: 12,
@@ -45,14 +50,43 @@ export default {
       ]
     }
   },
+  methods: {
+    addPost() {
+      let new_post = {
+        date: DateModule.getCurrentDate(),
+        nb_likes: 0,
+        content:   this.post_content,
+      }
+      this.posts.push(new_post);
+    }
+  },
 }
 </script>
 
 <style lang="scss" scoped>
+* {
+  margin: auto;
+  margin-top: 20px;
+}
+
+.add-post {
+  display: flex;
+  width: 800px;
+  height: 75px;
+  align-content: center;
+
+  input {
+    border: 1px solid grey;
+  }
+  img {
+    cursor: pointer;
+  }
+}
+
 h2 {
   color: #45AAF2;
   font-family: 'Lobster', cursive;
   font-size: 1.7em;
-
 }
+
 </style>
