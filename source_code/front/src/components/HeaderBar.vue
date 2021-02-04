@@ -4,9 +4,9 @@
             <h1>PostApp</h1>
             <ul id="navBar">
                 <li><router-link :to="{name: 'Home'}">Home</router-link></li>
-                <li>Signup</li>
+                <li v-if="!loginInfos.is_logged">Signup</li>
                 <li v-if="!loginInfos.is_logged"><router-link :to="{name: 'Login'}">Login</router-link></li>
-                <li v-else>Hello {{ loginInfos.username }} </li>
+                <li v-else>Hello {{ loginInfos.username }} !</li>
             </ul>
         </div>
     </div>
