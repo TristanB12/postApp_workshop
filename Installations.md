@@ -12,7 +12,7 @@ First, create a new github repository and clone it into your computer.
 Secondly, make sure you have node.js installed. If not you can install it [here](https://nodejs.org/en/download/package-manager/#centos-fedora-and-red-hat-enterprise-linux).
 
 Then we need to [install](https://cli.vuejs.org/guide/installation.html) vue-cli to config and manage easily our project.
-After it is installed you can create a new vue project with `vue create front`, it will create a `front` directory with all the files you need.
+After it is installed you can create a new vue project with `vue create front` command line, it will create a `front` directory with all the files you need.
 
 You are now invited to select projects settings: use **arrow keys** to navigate, **enter** to go to next step and **space** to select/unselect.
  - choose `Manually select features`
