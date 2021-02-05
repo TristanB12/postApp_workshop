@@ -38,7 +38,7 @@
 }
 
 .post-stats {
-    width: 75px;
+    width: 25px;
     padding-top: 5px;
     background-color: #45AAF2;
     color: white;
@@ -48,6 +48,7 @@
 }
 
 .post-body {
+    width: 300px;
     padding: 5px;
     display: flex;
     flex-direction: column;
