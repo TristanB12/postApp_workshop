@@ -45,3 +45,20 @@ if he is not, the bar will display as in step one. Otherwise it should display "
 ![plot](https://github.com/TristanB12/postApp_workshop/blob/master/asides/images/headerbarloggedin.png)
 
 In order to finish this step you will need to look [how to pass data to child component](https://vuejs.org/v2/guide/components.html#Passing-Data-to-Child-Components-with-Props), [how to display data](https://vuejs.org/v2/guide/syntax.html) and finally [display element depending on a condition](https://vuejs.org/v2/guide/conditional.html#v-if).
+
+## Step 03 - Display posts
+
+In your `Home.vue` file create a new data equal to [this](https://github.com/TristanB12/postApp_workshop/blob/master/asides/content/postsArray.txt) array.
+Now you need to create a new component `PostItem.vue`that displays posts informations of one object in the array (import this component in `Home.vue`):
+![plot](https://github.com/TristanB12/postApp_workshop/blob/master/asides/images/post.png)
+
+Check the [v-for](https://vuejs.org/v2/guide/list.html) directive to render each posts.
+
+## step 03 - Add post
+
+In this last step you want to add an *add post* feature: user can write a message and add it in the array of posts.
+In your `Home.vue` create an input and a *add post* button.
+Use what you've learned in this workshop to implement this feature. If you want to add an object in the array, use the following syntax:
+`array.push(object)`.
+
+
