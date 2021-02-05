@@ -9,7 +9,7 @@
             </ul>
             <ul class="navbar-logged"  v-else>
                 <li><router-link :to="{name: 'Home'}">Home</router-link></li>
-                <li>Account</li>
+                <li><router-link :to="{name: 'Account'}">Account</router-link></li>
                 <li class="not-a-link">Hello {{ loginInfos.username }} ! </li>
             </ul>
         </div>
