@@ -2,6 +2,7 @@
 
 Before continuing, make sure you've done all the [installations](https://github.com/TristanB12/postApp_workshop/blob/master/Installations.md) (at least the front-end ones)
 
+You can look at the [style reference](https://github.com/TristanB12/postApp_workshop/blob/master/style_reference.md) file where you can find all colors and font used in this workshop.
 ## Step 01 - Login page
 
 Create a `HeaderBar.vue` file into `/front/src/components/`. If you type `vb` in this file you should see this:
