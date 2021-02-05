@@ -55,6 +55,7 @@ Now you need to create a new component `PostItem.vue`that displays posts informa
 Check the [v-for](https://vuejs.org/v2/guide/list.html) directive to render each posts.
 
 ## step 03 - Add post
+![plot](https://github.com/TristanB12/postApp_workshop/blob/master/asides/images/home_page.png)
 
 In this last step you want to add an *add post* feature: user can write a message and add it in the array of posts.
 In your `Home.vue` create an input and a *add post* button.
