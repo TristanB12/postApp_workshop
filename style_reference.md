@@ -10,3 +10,7 @@ In this document you can find all the colors and fonts used in this workshop.
 
 
 ## Fonts
+
+ - [Lobster](https://fonts.google.com/specimen/Lobster?query=lobs&preview.text_type=custom)
+ - [Roboto](https://fonts.google.com/specimen/Roboto?query=roboto&preview.text_type=custom)
+ - [Open Sans](https://fonts.google.com/specimen/Open+Sans?query=open+sans&preview.text_type=custom)
