@@ -8,7 +8,12 @@
             </div>
             <div class="user-infos">
                 <h3>Informations</h3>
-                <span> <span class="title">Username:</span> {{username}} </span>
+              <div class="user-infos">
+                  <div class="info" v-for="info in informations" :key="info.title">
+                      <span class="title"> {{ info.title }}: </span>
+                      <span class="content"> {{ info.content }} </span>
+                  </div>
+              </div>
             </div>
         </body>
     </div>
@@ -30,26 +35,40 @@ import PostItem from '@/components/PostItem.vue';
         data() {
             return {
                 posts: [
+                        {
+                          date: '10/02/2021',
+                          nb_likes: 12,
+                          content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. trop bien ce workshop Ut laoreet fringilla lorem, sit amet semper neque interdum quis'
+                        },
+                        {
+                          date: '25/12/2020',
+                          nb_likes: 4,
+                          content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Joyeux noël les potes . Ut laoreet fringilla lorem, sit amet semper neque interdum quis'
+                        },
+                        {
+                          date: '28/03/2020',
+                          nb_likes: 62,
+                          content: 'eros nisl, eu ultrices massa nulla ac augue Donec id efficitur nulla, eu efficitur tellus. In ut sagittis urna, non tempus felis. Fusce convallis, ligula a mattis suscipit'
+                        },
+                        {
+                          date: '19/07/2019',
+                          nb_likes: 44,
+                          content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. trop bien ce workshop Ut laoreet fringilla lorem, sit amet semper neque interdum quis'
+                        }
+                    ],
+                informations: [
                     {
-                      date: '10/02/2021',
-                      nb_likes: 12,
-                      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. trop bien ce workshop Ut laoreet fringilla lorem, sit amet semper neque interdum quis'
+                        title: 'Username',
+                        content: this.username,
                     },
                     {
-                      date: '25/12/2020',
-                      nb_likes: 4,
-                      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Joyeux noël les potes . Ut laoreet fringilla lorem, sit amet semper neque interdum quis'
+                        title: 'First name',
+                        content: 'name',
                     },
                     {
-                      date: '28/03/2020',
-                      nb_likes: 62,
-                      content: 'eros nisl, eu ultrices massa nulla ac augue Donec id efficitur nulla, eu efficitur tellus. In ut sagittis urna, non tempus felis. Fusce convallis, ligula a mattis suscipit'
+                        title: 'Mail adress',
+                        content: 'mailasress@gmail.com',
                     },
-                    {
-                      date: '19/07/2019',
-                      nb_likes: 44,
-                      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. trop bien ce workshop Ut laoreet fringilla lorem, sit amet semper neque interdum quis'
-                    }
                 ]
             }
         },
@@ -58,7 +77,7 @@ import PostItem from '@/components/PostItem.vue';
 
 <style lang="scss" scoped>
 #AccountPage {
-    width:  70%;
+    width:  50%;
     margin: auto;
     margin-top: 20px;
     display: flex;
@@ -88,5 +107,15 @@ body {
     div {
         margin-top: 20px;
     }
+}
+
+.title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #45AAF2;
+}
+.content {
+    font-size:  1.1em;
 }
 </style>
