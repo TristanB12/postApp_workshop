@@ -29,3 +29,12 @@ Finally go into your `front/` folder and run `yarn serve` or `npm run dev`, go i
 ## Back-end
 
 First, run these commands: `npm init -f`, `npm install --save mongoose express nodemon`
+
+Create a free account on [MongoDB](https://www.mongodb.com/cloud/atlas/signup) and then create a *cluster* with **AWS** and only the free options.
+
+While the cluster is starting, click on *Database Access* and create a new user (don't forget the username and the password). Make sure to have the **read and write to any database** option and click on *add user*.
+
+Once finished, go back in the *cluster* pannel and click on *connect* then add you current IP adress. Now you need to select a connection method with *connect your application*.
+
+Copy the generated string and go into your app.js file. Find this line: `mongoose.connect('STRING TO REPLACE',` and replace `STRING TO REPLACE` by the string you've copied (don't forget to replace `<password>` by your password).
+`
