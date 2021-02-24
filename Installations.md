@@ -15,6 +15,7 @@ Then we need to [install](https://cli.vuejs.org/guide/installation.html) vue-cli
 After it is installed you can create a new vue project with `vue create front` command line, it will create a `front` directory with all the files you need.
 
 You are now invited to select projects settings: use **arrow keys** to navigate, **enter** to go to next step and **space** to select/unselect.
+ - if requested, choose vue 2 instead of vue 3
  - choose `Manually select features`
  - select `Router`, `CSS Pre-procesors` and unselect `Linter / formatter`
  - say Yes to Use history mode for router
