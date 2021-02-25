@@ -4,27 +4,33 @@
             <h2>User login</h2>
             <input type="text" placeholder="Username" v-model="username_input">
             <input type="password" placeholder="Password" v-model="password_input">
-            <button @click="emitLogUser">Login</button>
+            <div v-html="error" class="error"></div>
+            <button @click="login">Login</button>
         </div>
     </div>
 </template>
 
 <script>
+import axios from 'axios'
     export default {
         name: 'LoginPage',
         data() {
             return {
                 username_input: '',
-                password_input: ''
+                password_input: '',
+                error: null
             }
         },
         methods: {
-            emitLogUser() {
-                this.$emit('userLogged', {
+            login() {
+                axios.post('http://localhost:8081/auth/login', {
                     username: this.username_input,
                     password: this.password_input
+                }).then(() => {
+                    this.$router.push({ name: 'Home' });
+                }).catch(error => {
+                    this.error = error.response.data.message;
                 })
-                this.$router.push({ name: 'Home' });
             }
         },
     }
@@ -71,5 +77,10 @@ button {
     color: #20BF6B;
     background-color: white;
     }
+}
+
+.error {
+    color: red;
+    text-align: center;
 }
 </style>

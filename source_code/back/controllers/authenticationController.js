@@ -2,13 +2,14 @@ const User = require('../models/User')
 
 module.exports = {
     login(req, res) {
-        User.findOne({email : req.body.email})
+        User.findOne({username : req.body.username})
             .then(user => {
                 if(!user) {
                     return res.status(400).json({
                         message: 'Username not found'
                     })
                 }
+                console.log(user.username)
                 if(req.body.password == user.password) {
                     return res.status(200).json({
                         user: user,
