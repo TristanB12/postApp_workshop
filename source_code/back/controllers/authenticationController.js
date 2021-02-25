@@ -9,7 +9,6 @@ module.exports = {
                         message: 'Username not found'
                     })
                 }
-                console.log(user.username)
                 if(req.body.password == user.password) {
                     return res.status(200).json({
                         user: user,
