@@ -19,4 +19,8 @@ app.use((req, res, next) => {
 
 app.use(bodyParser.json());
 
+const authRoutes = require('./routes/auth');
+
+app.use('/auth', authRoutes);
+
 module.exports = app;
