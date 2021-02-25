@@ -29,7 +29,15 @@ Finally go into your `front/` folder and run `yarn serve` or `npm run dev`, go i
 
 ## Back-end
 
-First, create a new github repository and clone it to your computer (if you have done the Front-end part, you can use the repo created for this part).
+First, create a new github repository and clone it to your computer.
+Download [this]() `front/` directory and place it at the root of your repo.
+If you don't have Vue.js installed, just run `npm install vue`, then go inside the `front/` directory and run these commands:
+ - `npm install`
+ - `npm run serve`
+ - 
+Finally go into your browser at http://localhost:8080/
+You should see something like [this](https://github.com/TristanB12/postApp_workshop/blob/master/asides/images/home_page.png).
+
 Then, create a `back` directory and run these commands inside: `npm init -f`, `npm install --save mongoose express nodemon`
 
 Create a free account on [MongoDB](https://www.mongodb.com/cloud/atlas/signup) and then create a *cluster* with **AWS** and only the free options.
