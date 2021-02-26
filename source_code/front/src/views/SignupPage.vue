@@ -29,9 +29,14 @@ import axios from 'axios'
                     username: this.username_input,
                     password: this.password_input,
                     confirm_password: this.confirm_password_input
-                }).then(() => {
-                    this.$router.push({ name: 'Home' });
-                }).catch(error => {
+                })
+                .then(user => {
+                    console.log("connected");
+                    this.$store.dispatch('setUser', user.data.user)
+                    this.$router.push({name: "Home"})
+                })
+                .catch(error => {
+                    console.log(error);
                     this.error = error.response.data.message
                 })
             }

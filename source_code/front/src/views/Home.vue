@@ -4,12 +4,13 @@
       <input type="text" placeholder="add a post" v-model="post_content">
       <img src="@/assets/add_post_btn.png" alt="" class="post-btn" @click="addPost">
     </div>
-    <PostItem v-for="post in posts" :key="post.nb_likes" :postInfos="post" :username="username"/>
+    <PostItem v-for="post in posts" :key="post._id" :postInfos="post" @like-action="getPosts" />
   </div>
 </template>
 
 <script>
 import PostItem from '@/components/PostItem.vue';
+import axios from 'axios'
 const DateModule = require('@/modules/date.js')
 
 export default {
@@ -26,40 +27,35 @@ export default {
   data() {
     return {
       post_content: '',
-      posts: [
-        {
-          date: '10/02/2021',
-          nb_likes: 12,
-          content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. trop bien ce workshop Ut laoreet fringilla lorem, sit amet semper neque interdum quis'
-        },
-        {
-          date: '25/12/2020',
-          nb_likes: 4,
-          content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Joyeux noël les potes . Ut laoreet fringilla lorem, sit amet semper neque interdum quis'
-        },
-        {
-          date: '28/03/2020',
-          nb_likes: 62,
-          content: 'eros nisl, eu ultrices massa nulla ac augue Donec id efficitur nulla, eu efficitur tellus. In ut sagittis urna, non tempus felis. Fusce convallis, ligula a mattis suscipit'
-        },
-        {
-          date: '19/07/2019',
-          nb_likes: 44,
-          content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. trop bien ce workshop Ut laoreet fringilla lorem, sit amet semper neque interdum quis'
-        }
-      ]
+      posts: []
     }
   },
   methods: {
+    getPosts() {
+      axios.post('http://localhost:8081/post/', {
+        username: this.$store.state.user.username,
+      }).then(posts => {
+            this.posts = posts.data.posts
+        }).catch(error => {
+            console.log(error.response.data.message);
+          })
+    },
     addPost() {
-      let new_post = {
-        date: DateModule.getCurrentDate(),
-        nb_likes: 0,
-        content:   this.post_content,
-      }
-      this.posts.push(new_post);
+      axios.post('http://localhost:8081/post/add', {
+        user: this.$store.state.user.username,
+        content: this.post_content
+      }).then(() => {
+        console.log('post created');
+      }).catch(error => {
+            console.log(error.response.data.message);
+          })
+      this.post_content = ''
+      this.getPosts();
     }
   },
+  mounted() {
+    this.getPosts();
+  }
 }
 </script>
 

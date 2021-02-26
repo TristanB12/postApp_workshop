@@ -1,27 +1,25 @@
 <template>
     <div class="post">
         <div class="post-stats">
-            <img src="@/assets/like_button.png" alt="" class="post-btn">
-            <span> {{ postInfos.nb_likes }} </span>
+            <img v-if="postInfos.infos.liked_by_user" src="@/assets/red_like_button.png" alt="" class="post-btn">
+            <img v-else src="@/assets/like_button.png" alt="" class="post-btn">
+            <span> {{ postInfos.infos.nb_likes }} </span>
         </div>
         <div class="post-body">
-            <span class="post-header"> {{ postInfos.date }} by {{ username }} </span>
+            <span class="post-header"> {{ postInfos.infos.date }} by {{ postInfos.infos.user }} </span>
             <span class="post-content"> {{ postInfos.content }} </span>
         </div>
     </div>
 </template>
 
 <script>
+import axios from 'axios'
     export default {
         name: 'MyPosts',
         props: {
             postInfos: {
                 type: Object,
                 default: {}
-            },
-            username: {
-                type: String,
-                default:''
             },
         },
     }

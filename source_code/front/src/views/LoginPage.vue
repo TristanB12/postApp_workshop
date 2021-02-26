@@ -26,10 +26,11 @@ import axios from 'axios'
                 axios.post('http://localhost:8081/auth/login', {
                     username: this.username_input,
                     password: this.password_input
-                }).then(() => {
+                }).then(user => {
+                    this.$store.dispatch('setUser', user.data.user);
                     this.$router.push({ name: 'Home' });
                 }).catch(error => {
-                    this.error = error.response.data.message;
+                    this.error = error.response.data.message
                 })
             }
         },

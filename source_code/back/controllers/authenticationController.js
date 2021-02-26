@@ -5,18 +5,18 @@ module.exports = {
         User.findOne({username : req.body.username})
             .then(user => {
                 if(!user) {
-                    return res.status(400).json({
+                    res.status(400).json({
                         message: 'Username not found'
                     })
                 }
                 if(req.body.password == user.password) {
-                    return res.status(200).json({
+                    res.status(200).json({
                         user: user,
                         message: 'Connected'
                     })
                 }
                 else {
-                    return res.status(400).json({
+                    res.status(400).json({
                         message: 'wrong password'
                     })
                 }

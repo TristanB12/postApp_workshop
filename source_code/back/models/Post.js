@@ -13,6 +13,14 @@ const PostSchema = mongoose.Schema({
         user: {
             type: String,
             required: true,
+        },
+        liked_by: {
+            type: Array,
+            required: true
+        },
+        liked_by_user: {
+            type: Boolean,
+            required: true
         }
     },
     content: {
