@@ -15,6 +15,7 @@ Then we need to [install](https://cli.vuejs.org/guide/installation.html) vue-cli
 After it is installed you can create a new vue project with `vue create front` command line, it will create a `front` directory with all the files you need.
 
 You are now invited to select projects settings: use **arrow keys** to navigate, **enter** to go to next step and **space** to select/unselect.
+ - if requested, choose vue 2 instead of vue 3
  - choose `Manually select features`
  - select `Router`, `CSS Pre-procesors` and unselect `Linter / formatter`
  - say Yes to Use history mode for router
@@ -25,3 +26,25 @@ You are now invited to select projects settings: use **arrow keys** to navigate,
 Now you can replace your `front/src/` folder by downloading [this one](https://github.com/TristanB12/postApp_workshop/raw/master/asides/content/src_content.zip) to have no useless files.
 
 Finally go into your `front/` folder and run `yarn serve` or `npm run dev`, go into your browser at http://localhost:8080/. You should have a full white screen.
+
+## Back-end
+
+First, create a new github repository and clone it to your computer.
+Download [this]() `front/` directory and place it at the root of your repo.
+If you don't have Vue.js installed, just run `npm install vue`, then go inside the `front/` directory and run these commands:
+ - `npm install`
+ - `npm run serve`
+ - 
+Finally go into your browser at http://localhost:8080/
+You should see something like [this](https://github.com/TristanB12/postApp_workshop/blob/master/asides/images/home_page.png).
+
+Then, create a `back` directory and run these commands inside: `npm init -f`, `npm install --save mongoose express nodemon`
+
+Create a free account on [MongoDB](https://www.mongodb.com/cloud/atlas/signup) and then create a *cluster* with **AWS** and only the free options.
+
+While the cluster is starting, click on *Database Access* and create a new user (don't forget the username and the password). Make sure to have the **read and write to any database** option and click on *add user*.
+
+Once finished, go back in the *cluster* pannel and click on *connect* then add you current IP adress. Now you need to select a connection method with *connect your application*.
+
+Copy the generated string and go into your app.js file. Find this line: `mongoose.connect('STRING TO REPLACE',` and replace `STRING TO REPLACE` by the string you've copied (don't forget to replace `<password>` by your password).
+`

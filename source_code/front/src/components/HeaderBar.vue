@@ -2,7 +2,7 @@
     <div class="header-container">
         <div id="headerBar">
             <h1>PostApp</h1>
-            <ul id="navBar">
+            <ul class="navbar-unlogged"  v-if="!loginInfos.is_logged">
                 <li><router-link :to="{name: 'Home'}">Home</router-link></li>
                 <li v-if="!loginInfos.is_logged"><router-link :to="{name: 'Signup'}">Sign up</router-link></li>
                 <li v-if="!loginInfos.is_logged"><router-link :to="{name: 'Login'}">Login</router-link></li>
@@ -42,6 +42,9 @@ h1 {
     font-family: 'Lobster', cursive;
     font-size: 2.1em;
 }
+a:hover {
+    text-decoration: underline;
+}
 #headerBar {
     width: 70%;
     height: 8vh;
@@ -61,9 +64,6 @@ h1 {
             font-size: 1.5em;
             font-weight: 400;
             font-family: 'Roboto', sans-serif;
-            &:hover {
-                text-decoration: underline;
-            }
         }
     }
 }
