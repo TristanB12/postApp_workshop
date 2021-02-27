@@ -30,6 +30,7 @@ Finally go into your `front/` folder and run `yarn serve` or `npm run dev`, go i
 ## Back-end
 
 First, create a new github repository and clone it to your computer.
+
 [Download]() `front/` and `back/` directories and place them at the root of your repo.
 
 You need to open two terminals in order to launch two local servers: one for `back/` and one for `front/`.
@@ -43,6 +44,6 @@ While the cluster is starting, click on *Database Access* and create a new user 
 
 Once finished, go back in the *cluster* pannel and click on *connect* then add you current IP adress. Now you need to select a connection method with *connect your application*.
 
-Copy the generated string and go into your app.js file. Find this line: `mongoose.connect('STRING TO REPLACE',` and replace `STRING TO REPLACE` by the string you've copied (don't forget to replace `<password>` by your password).
+Copy the generated string and go into your `app.js` file. Find this line: `mongoose.connect('STRING TO REPLACE',` and replace `STRING TO REPLACE` by the string you've copied (don't forget to replace `<password>` by your password).
 
 Finally run `nodemon serve` or `./node_modules/.bin/nodemon serve` in your `back/` directory
