@@ -25,20 +25,11 @@ import axios from 'axios'
         },
         methods: {
             signUp() {
-                axios.post('http://localhost:8081/auth/signup', {
-                    username: this.username_input,
-                    password: this.password_input,
-                    confirm_password: this.confirm_password_input
-                })
-                .then(user => {
-                    console.log("connected");
-                    this.$store.dispatch('setUser', user.data.user)
-                    this.$router.push({name: "Home"})
-                })
-                .catch(error => {
-                    console.log(error);
-                    this.error = error.response.data.message
-                })
+                // TODO: add a post request to http://localhost:8081/auth/signup
+                //       if an error occure, set this.error to the data of the response
+                //       else log the user with :
+                //                  - this.$store.dispatch('setUser', user.data.user);
+                //                  - this.$router.push({ name: 'Home' });
             }
         },
     }
