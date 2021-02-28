@@ -58,5 +58,7 @@ Look at the [save](https://openclassrooms.com/fr/courses/6390246-passez-au-full-
 Now you start to understand how to build your server. For this last step use all what you've learned in this workshop.
 
 You will need to create a **get** endpoint wich must match `/post/`.
+
 It just return all the posts af the database.
+
 Don't be affraid to search on internet.
