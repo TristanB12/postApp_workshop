@@ -30,15 +30,13 @@ Finally go into your `front/` folder and run `yarn serve` or `npm run dev`, go i
 ## Back-end
 
 First, create a new github repository and clone it to your computer.
-Download [this]() `front/` directory and place it at the root of your repo.
-If you don't have Vue.js installed, just run `npm install vue`, then go inside the `front/` directory and run these commands:
- - `npm install`
- - `npm run serve`
- - 
-Finally go into your browser at http://localhost:8080/
-You should see something like [this](https://github.com/TristanB12/postApp_workshop/blob/master/asides/images/home_page.png).
 
-Then, create a `back` directory and run these commands inside: `npm init -f`, `npm install --save mongoose express nodemon`
+[Download]() `front/` and `back/` directories and place them at the root of your repo.
+
+You need to open two terminals in order to launch two local servers: one for `back/` and one for `front/`.
+
+ - In `back/` run `npm install`
+ - In `front/` run `npm install` and `npm run serve`
 
 Create a free account on [MongoDB](https://www.mongodb.com/cloud/atlas/signup) and then create a *cluster* with **AWS** and only the free options.
 
@@ -46,5 +44,6 @@ While the cluster is starting, click on *Database Access* and create a new user 
 
 Once finished, go back in the *cluster* pannel and click on *connect* then add you current IP adress. Now you need to select a connection method with *connect your application*.
 
-Copy the generated string and go into your app.js file. Find this line: `mongoose.connect('STRING TO REPLACE',` and replace `STRING TO REPLACE` by the string you've copied (don't forget to replace `<password>` by your password).
-`
+Copy the generated string and go into your `app.js` file. Find this line: `mongoose.connect('STRING TO REPLACE',` and replace `STRING TO REPLACE` by the string you've copied (don't forget to replace `<password>` by your password).
+
+Finally run `nodemon serve` or `./node_modules/.bin/nodemon serve` in your `back/` directory
