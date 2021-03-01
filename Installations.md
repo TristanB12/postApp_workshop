@@ -31,7 +31,7 @@ Finally go into your `front/` folder and run `yarn serve` or `npm run dev`, go i
 
 First, create a new github repository and clone it to your computer.
 
-[Download]() `front/` and `back/` directories and place them at the root of your repo.
+[Download](https://github.com/TristanB12/postApp_workshop/raw/master/asides/content/back-end-base.zip) `front/` and `back/` directories and place them at the root of your repo.
 
 You need to open two terminals in order to launch two local servers: one for `back/` and one for `front/`.
 
