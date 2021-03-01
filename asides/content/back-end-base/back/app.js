@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+const User = require('./models/User');
 
 mongoose.connect('STRING TO REPLACE',
 {   useNewUrlParser: true,
@@ -22,5 +23,7 @@ app.use(bodyParser.json());
 const authRoutes = require('./routes/auth');
 
 app.use('/auth', authRoutes);
+
+// add your new routes/endpoints here
 
 module.exports = app;

@@ -1,8 +1,7 @@
 <template>
     <div class="post">
         <div class="post-stats">
-            <img v-if="postInfos.infos.liked_by_user" src="@/assets/red_like_button.png" alt="" class="post-btn">
-            <img v-else src="@/assets/like_button.png" alt="" class="post-btn">
+            <img src="@/assets/like_button.png" alt="" class="post-btn">
             <span> {{ postInfos.infos.nb_likes }} </span>
         </div>
         <div class="post-body">

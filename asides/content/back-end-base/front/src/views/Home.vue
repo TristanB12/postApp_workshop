@@ -32,11 +32,11 @@ export default {
   },
   methods: {
     getPosts() {
-      axios.post('http://localhost:8081/post/', {
-        username: this.$store.state.user.username,
-      }).then(posts => {
+      axios.get('http://localhost:8081/post/')
+          .then(posts => {
             this.posts = posts.data.posts
-        }).catch(error => {
+          })
+          .catch(error => {
             console.log(error.response.data.message);
           })
     },

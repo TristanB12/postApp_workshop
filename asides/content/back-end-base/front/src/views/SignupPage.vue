@@ -26,7 +26,7 @@ import axios from 'axios'
         methods: {
             signUp() {
                 // TODO: add a post request to http://localhost:8081/auth/signup with all inputs in body
-                //       if an error occure, set this.error to the data of the response
+                //       if an error occures, set this.error to the data of the response
                 //       else log the user with :
                 //                  - this.$store.dispatch('setUser', user.data.user);
                 //                  - this.$router.push({ name: 'Home' });
