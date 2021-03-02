@@ -11,7 +11,7 @@ module.exports = {
                 liked_by: [],
                 liked_by_user: false
             },
-            content: 'do not copy paste ;)'
+            content: req.body.content
         })
         console.log(post)
         post.save()
