@@ -53,7 +53,7 @@ You can get current date by importing `Date` from `./modules/date` and calling t
 Look at the [save](https://openclassrooms.com/fr/courses/6390246-passez-au-full-stack-avec-node-js-express-et-mongodb/6466398-enregistrez-et-recuperez-des-donnees#/id/r-6466369) method.
 
 
-## Step 03 - Get posts endpoint
+## Step 04 - Get posts endpoint
 
 Now you start to understand how to build your server. For this last step use all what you've learned in this workshop.
 
