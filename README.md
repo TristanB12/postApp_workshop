@@ -1,4 +1,4 @@
-# postApp_workshop
+# **postApp_workshop**
 
 The aim of this workshop is to introduce you to fullstack development. You will learn how to do a postApp with:
   - a full authentication system (with login and sign up modules)
